@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-core
+    implementation group: 'io.cucumber', name: 'cucumber-core', version: '7.18.1'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
+    implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.18.1'
+    // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.18.1'
+    implementation 'org.apache.httpcomponents.client5:httpclient5:5.1.3'
+    implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.1.3'
+// https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator
+    implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '5.4.0'
+// https://mvnrepository.com/artifact/io.rest-assured/xml-path
+    implementation group: 'io.rest-assured', name: 'xml-path', version: '5.4.0'
+// https://mvnrepository.com/artifact/io.rest-assured/rest-assured-common
+    implementation group: 'io.rest-assured', name: 'rest-assured-common', version: '5.4.0'
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20240303'
+}
+
+test {
+    useJUnitPlatform()
+}
